@@ -4,8 +4,25 @@
 import { MagnifyingGlass } from "phosphor-react";
 import { Navbar, Button,  } from "keep-react";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { IoMdNotifications } from "react-icons/io";
+import { FaRegMoon } from "react-icons/fa";
+
+// import { useTheme, setTheme } from 'daisyui';
+// import { setStoredTheme } from './theme.jsx';
 
 export const NavbarComponent = () => {
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const handleSearch = () => {
+    // Perform the search action with the searchTerm
+    console.log('Searching for:', searchTerm);
+    // You can add your search logic here
+    setIsSearchOpen(false);
+  };
+
 
 const manuItems = [
   {
@@ -46,7 +63,33 @@ const manuItems = [
   }
 ]
 
+// const { dark } = useTheme();
+
+// const toggleTheme = () => {
+//   const newTheme = dark ? 'light' : 'dark';
+//   setTheme({ dark: !dark });
+//   setStoredTheme(newTheme);
+// };
+
   return (
+    <>
+      {isSearchOpen ? (
+        <div className="flex items-center">
+          <input
+           className="w-[100%] h-auto m-4 p-3"
+            type="text"
+            placeholder=" Please Search Your Items "
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <Button className="p-3" size="sm" type="link" onClick={handleSearch}>
+                Search
+          </Button>
+          <Button className="p-3" size="sm" type="link" onClick={handleSearch}>
+                 Delete
+          </Button>
+        </div>
+      ) : ( 
     <Navbar className="bg-accent text-white mb-30 " fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className="flex items-center">
@@ -65,8 +108,6 @@ const manuItems = [
             tag="ul"
             className="lg:flex hidden items-center justify-between gap-8 "
           >
- 
-
               {manuItems.map((aa, index) => (
               <NavLink key={index} to={aa.root}>
                 {aa.name}
@@ -89,39 +130,74 @@ const manuItems = [
         </Navbar.Container>
 
         <Navbar.Container className="flex gap-2">
-          <Button size="sm" type="link">
-            <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                  </svg>
-
+          <Button   size="sm" type="link">     
+             <span >            
+             <a><FaRegMoon className="h-5 w-5" /></a>
             </span>
           </Button>
           <Button size="sm" type="link">
-            <span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                </svg>
+            <span>            
+                    <a><IoMdNotifications className="h-6 w-6" /></a>                  
             </span>
           </Button>
 
-          <Button size="sm" type="link">
+
+
+
+        <div>
+              <Button size="sm" type="link" onClick={() => setIsSearchOpen(true)}>
                 <span>
                   <MagnifyingGlass size={25} color="white" />
                 </span>
-          </Button>
-          <Button size="xs" type="outlineGray">
-            <span className="ml-1 text-metal-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
+              </Button>
+              {isSearchOpen && (
+                <div className="flex items-center">
+                  <input
+                    type="text"
+                    placeholder="search"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  <Button size="sm" type="link" onClick={handleSearch}>
+                    Search
+                  </Button>
+                </div>
+              )}
+            </div>
 
-            </span>
-          </Button>
+          <div  className="ml-1 mt-3 text-metal-100 text-2xl"> 
+<div className="drawer drawer-end">
+    <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+    <div className="drawer-content">
+      {/* Page content here */}
+      <label htmlFor="my-drawer-4" className="bg-accent">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  strokeWidth={1.5} stroke="white" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round"  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      </label>
+    </div> 
+    <div className="drawer-side">
+      <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
+      
+            <ul className="menu p-4 gap-4 text-xl w-80 min-h-full bg-base-200 text-base-content">
+            {manuItems.map((aa, index) => (
+                <NavLink key={index} to={aa.root}>
+                  {aa.name}
+                </NavLink>
+              ))}
+      </ul>
+            
+    </div>
+  </div>
+          </div>
+
+          
           <Navbar.Toggle />
         </Navbar.Container>
         
       </Navbar.Container>
     </Navbar>
+     )}
+     </>
   );
 }

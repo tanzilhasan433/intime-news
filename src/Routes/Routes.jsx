@@ -16,6 +16,10 @@ import Jobs from "../Pages/Jobs/Jobs";
 import News from "../Pages/News/News";
 import Trending from "../Pages/Home/SubPages/Trending/Trending";
 import AllBd from "../Pages/AllBD/AllBd";
+import Details from "../Components/SubComponents/Details";
+import TrendingFirst from "../Pages/Home/SubPages/TrendingFirst/TrendingFirst";
+// import NewsList from "../Components/NewsList";
+// import NewsDetails from "../Components/NewsDetails";
 
 
 export const router = createBrowserRouter([
@@ -78,8 +82,15 @@ export const router = createBrowserRouter([
             {
                 path: 'trending',
                 element: <Trending></Trending>
+            },
+            {
+                path: 'trendingfirst',
+                element: <TrendingFirst></TrendingFirst>
+            },
+            {
+                path: '/details/:id',
+                element: <Details></Details>
             }
-
         ]
     },
  

@@ -15,9 +15,9 @@ const LatestNewsDisplay = () => {
             console.error('Error fetching data:', error);
           });
       }, []);
-      const displayedData = data.slice(0, 4);
+      const displayedData = data.slice(0, 3);
     return (
-        <div className='mt-10'>             
+        <div className=''>             
                                 {displayedData.map(item => (
                                     <LatestDisplayCard 
                                     key={item.id}

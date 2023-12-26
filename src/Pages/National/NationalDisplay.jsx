@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import NationalDisplayCard from './NationalDisplayCard';
 import NationalFirstPart from './NationalFirstPart';
-// import LatestNewsDisplay from '../Home/LatestNews/LatestNewsDisplay';
+import LatestNewsDisplay from '../Home/LatestNews/LatestNewsDisplay';
 
 
 const NationalDisplay = () => {
@@ -18,11 +18,11 @@ const NationalDisplay = () => {
             console.error('Error fetching data:', error);
           });
       }, []);
-      const displayedData = data.slice(0, 4);
+      const displayedData = data.slice(0, 3);
     return (
         <div>
-                <h1>National News </h1>
-         <div  className="mt-10" style={{ display: 'flex', width: '100%' }}>
+                <h1 className='text-2xl'> জাতীয়  </h1>
+         <div  className="mt-2" style={{ display: 'flex', width: '100%' }}>
                 <div  style={{ flex: '4', padding: '5px', background: '#f2f2f2', border: '5px' }}>
                     <NationalFirstPart></NationalFirstPart>
              
@@ -38,7 +38,7 @@ const NationalDisplay = () => {
                 </div>
 
                 <div  style={{ flex: '4', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
-                    {/* <LatestNewsDisplay></LatestNewsDisplay> */}
+                    <LatestNewsDisplay></LatestNewsDisplay>
                 </div>
             </div>  
       </div>   

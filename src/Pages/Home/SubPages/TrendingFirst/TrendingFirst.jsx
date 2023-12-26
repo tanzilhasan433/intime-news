@@ -2,7 +2,6 @@ import TrendingFirstCard from "../../../../Components/SubComponents/TrendingFirs
 import useTrendingFirst from "../../../../hooks/subHooks/useTrendingFirst";
 
 
-
 const TrendingFirst = () => {
     const [trendingfirst] = useTrendingFirst();
     return (

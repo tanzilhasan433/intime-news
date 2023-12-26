@@ -2,10 +2,12 @@ import { Navbar } from "keep-react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  
   const menubar = [
     {
-      root: "trending",
+      root: "trending", 
       name: "ট্রেন্ডিং",
+      className: "bg-slate-600"
     },
     {
       root: "weather",
@@ -42,9 +44,9 @@ const Header = () => {
   ];
   return (
     <Navbar fluid={true}>
-      <Navbar.Container className="mt-32 flex items-center justify-between">
+      <Navbar.Container className="mt-32 flex items-center justify-between ">
         <Navbar.Collapse collapseType="sidebar">
-          <Navbar.Container tag="ul" className="flex flex-col gap-5 ">
+          <Navbar.Container tag="ul" className="flex flex-col gap-8  ">
             {menubar.map((a, index) => (
               <NavLink key={index} to={a.root}>
                 {a.name}
@@ -62,13 +64,15 @@ const Header = () => {
           </Navbar.Container>
         </Navbar.Collapse>
 
-        <Navbar.Container className="flex items-center gap-3 ">
+        <Navbar.Container className="flex items-center gap-2 ">
           <Navbar.Container
             tag="ul"
-            className="lg:flex  items-center justify-between gap-5"
+            className="lg:flex  items-center justify-between "
           >
             {menubar.map((a, index) => (
-              <NavLink key={index} to={a.root}>
+              <NavLink className="bg-slate-300 m-2 p-2"
+              key={index} 
+              to={a.root}>
                 {a.name}
               </NavLink>
             ))}

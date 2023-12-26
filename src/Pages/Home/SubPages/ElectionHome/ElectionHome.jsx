@@ -6,7 +6,7 @@ const ElectionHome = () => {
     return (
         <div className="mt-10 mb-10 bg-sky-100">   
             <h1 className=" text-2xl">জাতীয় সংসদ নির্বাচন</h1> 
-            <div className="grid mt-10  md:grid-cols-4 justify-center gap-2">
+            <div className="grid mt-2 mb-5 md:grid-cols-4 justify-center gap-2">
                     {
                         electionhome.map(electionhomeItem => <ElectionHomeCard
                             key={electionhomeItem._id}

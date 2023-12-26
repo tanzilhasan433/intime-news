@@ -16,11 +16,11 @@ const SportsDisplay = () => {
             console.error('Error fetching data:', error);
           });
       }, []);
-      const displayedData = data.slice(0, 8);
+      const displayedData = data.slice(0, 6);
     return (
             <div>
-                  <h1>Sports News </h1>
-                <div  className="mt-10" style={{ display: 'flex', width: '100%' }}>
+                  <h1 className='text-2xl mt-10'> খেলাধুলা </h1>
+                <div  className="" style={{ display: 'flex', width: '100%' }}>
                         <div  style={{ flex: '4', padding: '5px', background: '#f2f2f2', border: '5px' }}>
                             <SportsFirstCard></SportsFirstCard>
 

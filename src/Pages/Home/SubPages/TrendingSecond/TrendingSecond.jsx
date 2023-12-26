@@ -1,5 +1,7 @@
+
 import TrendingSecondCard from "../../../../Components/SubComponents/TrendingSecondCard";
 import useTrendingSecond from "../../../../hooks/subHooks/useTrendingSecond";
+import Opinion from "../Opinion/Opinion";
 
 const TrendingSecond = () => {
     const [trendingsecond] = useTrendingSecond();
@@ -21,7 +23,10 @@ const TrendingSecond = () => {
 
         </div>
         <div  style={{ flex: '3', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
-            
+            <h2 className="text-2xl">মতামত</h2>
+            <div>
+                <Opinion></Opinion>
+            </div>
         </div>
     </div>
         </div>
