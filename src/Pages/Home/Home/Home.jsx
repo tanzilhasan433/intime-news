@@ -6,6 +6,7 @@ import SportsDisplay from "../../Sports/SportsDisplay";
 import Header from "../Header/Header";
 import CountryNews from "../News-Portal/CountryNews";
 import ElectionHome from "../SubPages/ElectionHome/ElectionHome";
+import ExclusiveHome from "../SubPages/ExclusiveHome/ExclusiveHome";
 import Trending from "../SubPages/Trending/Trending";
 import TrendingFirst from "../SubPages/TrendingFirst/TrendingFirst";
 import TrendingSecond from "../SubPages/TrendingSecond/TrendingSecond";
@@ -21,8 +22,9 @@ const Home = () => {
             <ElectionHome></ElectionHome>           
             <NationalDisplay></NationalDisplay>
             <SportsDisplay></SportsDisplay>
-            <InternationalDisplay></InternationalDisplay>
             <CountryNews></CountryNews>
+            <InternationalDisplay></InternationalDisplay>
+            <ExclusiveHome></ExclusiveHome>
             <PoliticsDisplay></PoliticsDisplay>
             
         </div>
