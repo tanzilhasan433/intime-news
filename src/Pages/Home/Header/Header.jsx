@@ -4,49 +4,45 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   
   const menubar = [
-    {
-      root: "trending", 
-      name: "ট্রেন্ডিং",
-      className: "bg-slate-600"
-    },
+
     {
       root: "weather",
-      name: "আবহাওয়া",
+      name: "আবহাওয়া >",
     },
     {
       root: "bnp",
-      name: "বিএনপি", 
+      name: "বিএনপি >", 
     },
     {
       root: "election",
-      name: "নির্বাচন",
+      name: "নির্বাচন >",
     },
     {
       root: "job-news",
-      name: "চাকুরী",
+      name: "চাকুরী >",
     },
     {
       root: "job-news",
-      name: "জাতীয় পার্টি",
+      name: "জাতীয় পার্টি >",
     },
     {
       root: "job-news",
-      name: "আওয়ামী লীগ",
+      name: "আওয়ামী লীগ >",
     },
     {
       root: "job-news",
-      name: "নামাজের সময়সূচী",
+      name: "নামাজের সময়সূচী >",
     },
     {
       root: "job-news",
-      name: "নৌকার মনোনয়ন",
+      name: "নৌকার মনোনয়ন >",
     },
   ];
   return (
     <Navbar fluid={true}>
-      <Navbar.Container className="mt-32 flex items-center justify-between ">
+      <Navbar.Container className="mt-32 flex items-center  justify-between ">
         <Navbar.Collapse collapseType="sidebar">
-          <Navbar.Container tag="ul" className="flex flex-col gap-8  ">
+          <Navbar.Container tag="ul" className="flex sm:hidden flex-col gap-8  ">
             {menubar.map((a, index) => (
               <NavLink key={index} to={a.root}>
                 {a.name}
@@ -67,10 +63,11 @@ const Header = () => {
         <Navbar.Container className="flex items-center gap-2 ">
           <Navbar.Container
             tag="ul"
-            className="lg:flex  items-center justify-between "
+            className="lg:flex  items-center justify-between  hidden  gap-2 "
           >
+            <NavLink to="/trending"  className="bg-cyan-900 m-1 p-1 text-white"> ট্রেন্ডিং </NavLink>
             {menubar.map((a, index) => (
-              <NavLink className="bg-slate-300 m-2 p-2"
+              <NavLink className="bg-slate-100 m-1 p-1"
               key={index} 
               to={a.root}>
                 {a.name}

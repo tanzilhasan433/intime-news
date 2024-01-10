@@ -1,0 +1,42 @@
+.dark_mode_input {
+    display: none;
+  }
+  
+  .toggle-wrapper {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-handle {
+    width: 18px;
+    height: 18px;
+    background-color: #777;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: left 0.3s ease;
+  }
+  
+  .dark_mode_input:checked + .dark_mode_label .toggle {
+    transform: translateX(30px);
+  }
+  
+  .dark_mode_input:checked + .dark_mode_label .toggle-handle {
+    left: 33px;
+  }

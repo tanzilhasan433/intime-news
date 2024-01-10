@@ -2,7 +2,7 @@ import { Card } from "keep-react";
 import { Heart } from "phosphor-react";
 const SportsFirstCard = () => {
     return (
-        <div>
+        <div className="lg:w-[400px]">
              <Card
           className=" overflow-hidden rounded-md"
           imgSrc="https://assets.dhakapost.com/media/imgAll/BG/2023December/test-20231217114952.jpg?width=560&height=315"

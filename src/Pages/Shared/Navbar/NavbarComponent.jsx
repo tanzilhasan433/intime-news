@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { IoMdNotifications } from "react-icons/io";
 import { FaRegMoon } from "react-icons/fa";
+// import DarkMode from "../DarkMode/DarkMode";
 
 // import { useTheme, setTheme } from 'daisyui';
 // import { setStoredTheme } from './theme.jsx';
@@ -58,7 +59,7 @@ const manuItems = [
     name: "খেলাধুলা"
   },
   {
-    root: "allbd",
+    root: "news",
     name: "সারাদেশ"
   }
 ]
@@ -70,6 +71,8 @@ const manuItems = [
 //   setTheme({ dark: !dark });
 //   setStoredTheme(newTheme);
 // };
+
+
 
   return (
     <>
@@ -90,7 +93,7 @@ const manuItems = [
           </Button>
         </div>
       ) : ( 
-    <Navbar className="bg-accent text-white mb-30 " fluid={true}>
+    <Navbar className="bg-cyan-900 text-white mb-30 fixed w-full top-0 z-50" fluid={true}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className="flex items-center">
           <Navbar.Brand>
@@ -129,12 +132,16 @@ const manuItems = [
           </Navbar.Collapse>
         </Navbar.Container>
 
+
         <Navbar.Container className="flex gap-2">
           <Button   size="sm" type="link">     
              <span >            
              <a><FaRegMoon className="h-5 w-5" /></a>
+             {/* <DarkMode></DarkMode> */}
             </span>
           </Button>
+
+
           <Button size="sm" type="link">
             <span>            
                     <a><IoMdNotifications className="h-6 w-6" /></a>                  
@@ -177,6 +184,7 @@ const manuItems = [
       </label>
     </div> 
     <div className="drawer-side">
+      
       <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
       
             <ul className="menu p-4 gap-4 text-xl w-80 min-h-full bg-base-200 text-base-content">

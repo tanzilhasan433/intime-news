@@ -11,7 +11,7 @@ const TrendingCard = ({trendingItem}) => {
         <div>
             
             <Card
-                    className="!max-w-xs  overflow-hidden rounded-md md:!max-w-[100%] h-[auto] transition-all duration-700 hover:scale-105"
+                    className="  overflow-hidden rounded-md md:!max-w-[100%] h-[auto] transition-all duration-700 hover:scale-105"
                     imgSrc={images}
                     
                     imgSize="md"

@@ -4,8 +4,10 @@ import useInternational from "../../hooks/useInternational";
 const International = () => {
      const [international] = useInternational();
     return (
-        <div  className="mt-10" style={{ display: 'flex', width: '100%' }}>
-        <div  style={{ flex: '8', padding: '5px', background: '#f2f2f2', border: '5px' }}>
+        <div  className="mt-10 flex w-[100%]">
+        <div  className="flex-8 p-5 bg-slate-200 border-[5px]">
+
+        {/* className="flex-8 p-5 bg-gray-200 border-5" */}
             
         <div className='grid pt-10  md:grid-cols-2 justify-center gap-2'>
             {
@@ -17,7 +19,7 @@ const International = () => {
         </div>
 
         </div>
-        <div  style={{ flex: '4', padding: '10px',  width: '50%', height:'50%', shadow: 'xl'  }}>
+        <div  className="flex-4 p-5 bg-slate-300 w-[50%] h-[50] shadow-xl">
             
         </div>
     </div>

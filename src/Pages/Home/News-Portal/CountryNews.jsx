@@ -5,11 +5,11 @@ const CountryNews = () => {
   const [selectedDivision, setSelectedDivision] = useState('');
   const [selectedDistrict, setSelectedDistrict] = useState('');
   const [selectedUpazila, setSelectedUpazila] = useState('');
-  const [divisionOptions, setDivisionOptions] = useState([]);
+  // const [divisionOptions, setDivisionOptions] = useState([]);
   const [districtOptions, setDistrictOptions] = useState([]);
   const [upazilaOptions, setUpazilaOptions] = useState([]);
-  const [upazilaNames , setUpazilaNames] = useState([]);
-  const [districtNames, setDistrictNames] = useState([]);
+  // const [upazilaNames , setUpazilaNames] = useState([]);
+  // const [districtNames, setDistrictNames] = useState([]);
   const [divisionNames, setDivisionNames] = useState([]);
   const [mainDatas, setMainDatas] = useState([]);
 

@@ -20,12 +20,12 @@ const PoliticsDisplay = () => {
     return (
         <div>
                 <h1 className='text-2xl mt-10'> রাজনীতি </h1>
-         <div  className="mt-2" style={{ display: 'flex', width: '100%' }}>
-                <div  style={{ flex: '4', padding: '5px', background: '#f2f2f2', border: '5px' }}>
+         <div  className="grid grid-cols-1 sm:grid-cols-3 md:flex-row mt-2" >
+                <div  className="flex-1 p-2 bg-gray-200 border-2">
                     <PoliticsFirstCard></PoliticsFirstCard>
              
                 </div>               
-                <div  style={{ flex: '4', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
+                <div  className="flex-1 sm:p-2 bg-gray-300  shadow-xl">
                                 {displayedData.map(item => (
                                     <PoliticsDisplayCard 
                                     key={item.id}
@@ -35,7 +35,7 @@ const PoliticsDisplay = () => {
                                     ))}
                 </div>
 
-                <div  style={{ flex: '4', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
+                <div   className="flex-1 sm:p-2 bg-gray-300  shadow-xl">
                     {/* <HealthCard></HealthCard> */}
                 </div>
             </div>  

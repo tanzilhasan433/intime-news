@@ -1,5 +1,7 @@
 import { Card } from "keep-react";
 import { Heart } from "phosphor-react";
+import { motion } from "framer-motion"
+
 const NationalFirstPart = () => {
     return (
         <div>
@@ -16,7 +18,16 @@ const NationalFirstPart = () => {
               
             </Card.Container>
             <Card.Container className="my-3">
-              <Card.Title>বাঙালি জাতিসত্তার পূর্ণতা দেন বঙ্গবন্ধু : হাইকমিশনার</Card.Title>
+              {/* <Card.Title>বাঙালি জাতিসত্তার পূর্ণতা দেন বঙ্গবন্ধু : হাইকমিশনার</Card.Title> */}
+                            
+                            <motion.a
+                                whileHover={{ scale: 1.0, color: 'blue' }}
+                                whileTap={{ scale: 0.9, color: 'blue' }}
+                                >
+                                {/* <h3 className=" text-bold">{title}</h3> */}
+                                <h3 className=" text-bold"> বাঙালি জাতিসত্তার পূর্ণতা দেন বঙ্গবন্ধু : হাইকমিশনার </h3>
+                                </motion.a>
+                                <br />
               <Card.Description>
               অস্ট্রেলিয়ায় বাংলাদেশের হাইকমিশনার এম আল্লামা সিদ্দীকী বলেছেন, হাজার বছরে সৃষ্টি হওয়া বাঙালি জাতি সত্তাকে বঙ্গবন্ধু শেখ মুজিবুর রহমান. 
               </Card.Description>

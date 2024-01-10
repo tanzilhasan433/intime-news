@@ -6,12 +6,12 @@ import useTrending from "../../../../hooks/subHooks/useTrending";
 const Trending = () => {
     const [trending] = useTrending();
     return (
-        <div>
+        <div className="mt-12">
 
-                <div  className="" style={{ display: 'flex', width: '100%' }}>
-        <div  style={{ flex: '9', padding: '5px', background: '#f2f2f2', border: '5px' }}>
+                <div  className="flex flex-col sm:flex-row">
+        <div  className="flex-9 sm:flex-1 p-2 bg-gray-200 border-2">
             
-        <div className="grid    md:grid-cols-3 justify-center gap-2">
+        <div className="grid   h-full w-full md:grid-cols-3 justify-center gap-2">
                 {
                     trending.map(trendingItem => <TrendingCard
                         key={trendingItem._id}
@@ -21,7 +21,7 @@ const Trending = () => {
                 </div>
 
         </div>
-        <div  style={{ flex: '3', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
+        <div  className="flex-3 sm:p-2 bg-gray-300 lg:w-1/4 shadow-xl">
             
         </div>
     </div>

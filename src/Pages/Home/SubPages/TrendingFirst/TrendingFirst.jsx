@@ -6,21 +6,20 @@ const TrendingFirst = () => {
     const [trendingfirst] = useTrendingFirst();
     return (
             <div>
-                   <div  className="" style={{ display: 'flex', width: '100%' }}>
-                      <div  style={{ flex: '9', padding: '5px', background: '#f2f2f2', border: '5px' }}>                        
-                             <div className="grid   h-[100%] w-[100%]  justify-center">
+                   <div  className="flex flex-col sm:flex-row" >
+                      <div className="flex-9 sm:flex-1 p-2 bg-gray-200 border-2" >                        
+                             <div className="grid h-full w-full justify-center">
                                     {
                                         trendingfirst.map(trendingfirstItem => <TrendingFirstCard
                                             key={trendingfirstItem._id}
                                             trendingfirstItem={trendingfirstItem}
                                         ></TrendingFirstCard>)
-                                    }
-                             </div>
-
+                                    }                                   
+                             </div>                           
                          </div>
-                     <div  style={{ flex: '3', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
-                        
-                    </div>
+                         <div className="flex-3 sm:p-2 bg-gray-300 lg:w-1/4 shadow-xl" >
+                            <h2>ADD details </h2>
+                        </div>
                  </div>
              </div>
     );

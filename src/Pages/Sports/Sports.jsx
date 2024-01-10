@@ -5,8 +5,8 @@ import LatestNewsDisplay from "../Home/LatestNews/LatestNewsDisplay";
 const Sports = () => {
     const [sports] = useSports()
     return (
-            <div  className="mt-10" style={{ display: 'flex', width: '100%' }}>
-            <div  style={{ flex: '6', padding: '5px', background: '#f2f2f2', border: '5px' }}>
+            <div  className="flex flex-col md:flex-row mt-10">
+            <div  className="flex-8 p-5 bg-slate-200 border-[5px]">
                 
             <div className='grid pt-10 mb-10 md:grid-cols-2 justify-center gap-2'>
                   {
@@ -20,7 +20,8 @@ const Sports = () => {
             
 
             </div>
-            <div  style={{ flex: '3', padding: '10px', background: '#e6e6e6', width: '50%', shadow: 'xl'  }}>
+            <div  className="flex-4  p-5 bg-slate-300 mt-5 md:mt-0 md:w-1/2 shadow-xl">
+            <h2 className="mt-10 mb-5 text-xl">সর্বশেষ</h2>
                   <LatestNewsDisplay></LatestNewsDisplay>
             </div>
         </div>

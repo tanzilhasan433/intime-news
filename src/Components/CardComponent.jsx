@@ -5,7 +5,7 @@ export const CardComponent = () => {
 
    
 
-<div className="mt-5 mb-10" style={{ display: 'flex', width: '100%' }}>
+<div className="mt-5 mb-10 " style={{ display: 'flex', width: '100%' }}>
 {/* First Column - col-3 */}
 <div style={{ flex: '3', padding: '10px', background: '#f2f2f2', border: '5px' }}>
 

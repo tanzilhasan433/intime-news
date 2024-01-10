@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Card } from "keep-react";
 import { Heart } from "phosphor-react";
+import { motion } from "framer-motion"
+// import { Link } from "react-router-dom";
 
 const ElectionHomeCard = ({electionhomeItem}) => {
     const {   title, images, des } = electionhomeItem ;    
@@ -8,7 +10,7 @@ const ElectionHomeCard = ({electionhomeItem}) => {
     return (
         <div>
          <Card
-          className=" overflow-hidden rounded-md"
+          className=" overflow-hidden rounded-md transition-all duration-700 hover:scale-105"
           imgSrc={images}
           imgSize="md">
           <Card.Container className="absolute right-3.5 top-3.5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-metal-50/50">
@@ -16,7 +18,15 @@ const ElectionHomeCard = ({electionhomeItem}) => {
           </Card.Container>
           <Card.Container className="p-6">
             <Card.Container className="my-3">
-              <Card.Title> {title} </Card.Title>
+              
+              {/* <Link to={`/details/${trendingsecondItem._id}`}> */}
+                                <motion.a
+                                whileHover={{ scale: 1.0, color: 'blue' }}
+                                whileTap={{ scale: 0.9, color: 'blue' }}
+                                >
+                                <h2 className="text-xl text-bold">{title}</h2>
+                                </motion.a>
+                            {/* </Link> */}
               <br />
               <Card.Description>
               {description}
